@@ -1,0 +1,10 @@
+*.pyc
+.venv
+.env
+.git
+__pycache__/
+*.code-workspace
+*.log
+.sesskey
+*sqlite.db*
+.vscode/
