@@ -9,7 +9,7 @@ if servers not in db.t:
 
 Server = servers.dataclass()
 User = users.dataclass()
-app = FastHTMLWithLiveReload(hdrs=(picolink))
+app = FastHTMLWithLiveReload(hdrs=(picolink, htmxsrc), default_hdrs=False)
 
 
 @patch
@@ -43,7 +43,7 @@ def home():
                 A("GitHub issue", href="https://github.com/picocss/pico/issues/616"),
             ),
             P(
-                "Both modals can't be closed by clicking outside the modal and they can't be closed by pressing the escape key. "
+                "Both modals are made with HTMX, But can't be closed with the escape key or by clicking outside the modal."
             ),
             Div(
                 Button(
